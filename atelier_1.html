@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: auto;
+    display: flex;
+  justify-content: center;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+    border-radius: 25px;
+    outline: solid 1px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+h3{
+    color: var(--neutral-700, #3D445C);
+font-family: Work Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+p{
+    color: var(--neutral-400, #858EAD);
+
+/* Caption */
+font-family: Work Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+h2{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Our Reputation</h2>
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h3>Best Services</h3>
+            <p>Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3>Best Services</h3>
+            <p>Cursus semper tellus volutpat aliquet lacus.</p>
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="card">
+            <h3>Best Designs</h3>
+            <p>Ultricies at ipsum nunc, tristique nam lectus.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
